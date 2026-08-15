@@ -69,7 +69,7 @@ export default function Page() {
 
   return (
     <div
-      className="flex flex-col h-screen max-w-md mx-auto overflow-hidden"
+      className="flex flex-col h-dvh max-w-md mx-auto overflow-hidden"
       style={{ background: '#f0f9ff', color: '#0c3547' }}
     >
       <Header />
@@ -100,7 +100,11 @@ export default function Page() {
 
       <div
         className="shrink-0 border-t"
-        style={{ background: '#ffffff', borderColor: '#bae6fd' }}
+        style={{
+          background: '#ffffff',
+          borderColor: '#bae6fd',
+          paddingBottom: 'env(safe-area-inset-bottom)',
+        }}
       >
         <PlatformsCard />
         <ChatInput onSend={handleSend} disabled={isLoading} />
