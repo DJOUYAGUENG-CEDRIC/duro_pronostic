@@ -40,9 +40,9 @@ export default function Header() {
     <header
       className="shrink-0 flex items-center gap-3 px-4 py-3 z-10 relative shadow-sm"
       style={{
-        background: '#ffffff',
-        borderBottom: '1px solid #bae6fd',
-        borderTop: '3px solid #0e7490',
+        background: '#121212',
+        borderBottom: '1px solid #2a2a2a',
+        borderTop: '3px solid #3b82f6',
       }}
     >
       <div className="relative shrink-0">
@@ -50,7 +50,7 @@ export default function Header() {
           src={PROFILE_IMAGE}
           alt={ASSISTANT_NAME}
           className="w-11 h-11 rounded-full object-cover"
-          style={{ boxShadow: '0 0 0 2px #0e7490' }}
+          style={{ boxShadow: '0 0 0 2px #3b82f6' }}
           onError={(e) => {
             e.target.onerror = null;
             e.target.src =
@@ -59,17 +59,17 @@ export default function Header() {
         />
         <span
           className="absolute bottom-0 right-0 w-3 h-3 rounded-full"
-          style={{ background: '#0e7490', boxShadow: '0 0 0 2px #ffffff' }}
+          style={{ background: '#3b82f6', boxShadow: '0 0 0 2px #121212' }}
         />
       </div>
 
       <div className="flex-1 min-w-0">
-        <p className="font-semibold text-sm truncate leading-tight" style={{ color: '#0c3547' }}>
+        <p className="font-semibold text-sm truncate leading-tight" style={{ color: '#ededed' }}>
           {ASSISTANT_NAME}
         </p>
         <div className="flex items-center gap-1.5 mt-0.5">
-          <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#0e7490' }} />
-          <span className="text-xs font-medium" style={{ color: '#0e7490' }}>En ligne</span>
+          <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#3b82f6' }} />
+          <span className="text-xs font-medium" style={{ color: '#3b82f6' }}>En ligne</span>
         </div>
       </div>
 
@@ -78,8 +78,8 @@ export default function Header() {
         onClick={() => setMenuOpen((v) => !v)}
         className="shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors"
         style={{
-          color: '#64748b',
-          background: menuOpen ? 'rgba(14,116,144,0.1)' : 'transparent',
+          color: '#a3a3a3',
+          background: menuOpen ? 'rgba(59,130,246,0.1)' : 'transparent',
         }}
         aria-label="Menu"
       >
@@ -89,17 +89,17 @@ export default function Header() {
       {menuOpen && (
         <div
           className="absolute top-full right-3 mt-2 w-52 rounded-xl overflow-hidden z-50 shadow-lg"
-          style={{ background: '#ffffff', border: '1px solid #bae6fd' }}
+          style={{ background: '#121212', border: '1px solid #2a2a2a' }}
         >
           <button
             type="button"
             onClick={() => { setMenuOpen(false); router.push('/admin'); }}
             className="flex items-center gap-3 w-full px-4 py-3 text-sm text-left transition-colors"
-            style={{ color: '#4b7a8a' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = '#f0f9ff'; e.currentTarget.style.color = '#0e7490'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#4b7a8a'; }}
+            style={{ color: '#a3a3a3' }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#000000'; e.currentTarget.style.color = '#3b82f6'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#a3a3a3'; }}
           >
-            <span style={{ color: '#0e7490' }}><LockIcon /></span>{' '}
+            <span style={{ color: '#3b82f6' }}><LockIcon /></span>{' '}
             Connexion Admin
           </button>
         </div>

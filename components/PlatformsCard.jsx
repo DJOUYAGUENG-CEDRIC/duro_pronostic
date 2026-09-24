@@ -23,7 +23,7 @@ function CopyIcon() {
 
 function CheckIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#0e7490" strokeWidth="2.5" className="w-3.5 h-3.5">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2.5" className="w-3.5 h-3.5">
       <polyline points="20 6 9 17 4 12" />
     </svg>
   );
@@ -54,9 +54,9 @@ export default function PlatformsCard() {
     <div className="px-3 pt-3 pb-1">
       <div
         className="rounded-xl px-3 py-2.5"
-        style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}
+        style={{ background: '#000000', border: '1px solid #2a2a2a' }}
       >
-        <p className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#94a3b8' }}>
+        <p className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#a3a3a3' }}>
           Plateformes recommandées
         </p>
 
@@ -65,23 +65,23 @@ export default function PlatformsCard() {
             <div
               key={p.name}
               className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5"
-              style={{ background: '#ffffff', border: '1px solid #bae6fd' }}
+              style={{ background: '#121212', border: '1px solid #2a2a2a' }}
             >
               <a
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-xs font-semibold transition-colors"
-                style={{ color: '#4b7a8a' }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = '#0e7490'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = '#4b7a8a'; }}
+                style={{ color: '#a3a3a3' }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = '#3b82f6'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = '#a3a3a3'; }}
                 title={`Rejoindre ${p.name}`}
               >
                 <ExternalLinkIcon />
                 {p.name}
               </a>
 
-              <span className="text-xs font-mono font-bold select-all" style={{ color: '#0e7490' }}>
+              <span className="text-xs font-mono font-bold select-all" style={{ color: '#3b82f6' }}>
                 {p.code}
               </span>
 
@@ -89,7 +89,7 @@ export default function PlatformsCard() {
                 type="button"
                 onClick={() => handleCopy(p.code, p.name)}
                 className="transition-colors ml-0.5"
-                style={{ color: copiedName === p.name ? '#0e7490' : '#94a3b8' }}
+                style={{ color: copiedName === p.name ? '#3b82f6' : '#a3a3a3' }}
                 title={`Copier le code ${p.code}`}
                 aria-label={`Copier le code ${p.code}`}
               >
@@ -99,8 +99,8 @@ export default function PlatformsCard() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 pt-2" style={{ borderTop: '1px solid #bae6fd' }}>
-          <span className="text-xs" style={{ color: '#94a3b8' }}>
+        <div className="flex items-center gap-2 pt-2" style={{ borderTop: '1px solid #2a2a2a' }}>
+          <span className="text-xs" style={{ color: '#a3a3a3' }}>
             Retrouvez-moi sur
           </span>
           <a

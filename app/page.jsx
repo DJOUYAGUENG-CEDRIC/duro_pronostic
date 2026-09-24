@@ -70,13 +70,13 @@ export default function Page() {
   return (
     <div
       className="flex flex-col h-dvh max-w-md mx-auto overflow-hidden"
-      style={{ background: '#f0f9ff', color: '#0c3547' }}
+      style={{ background: '#000000', color: '#ededed' }}
     >
       <Header />
 
       <main
         className="flex-1 overflow-y-auto min-h-0 px-3 py-4 space-y-3"
-        style={{ background: '#f0f9ff' }}
+        style={{ background: '#000000' }}
       >
         <ChatBubble sender="assistant" text={WELCOME_MESSAGE} />
         <AudioMessage src={AUDIO_URL} />
@@ -88,9 +88,9 @@ export default function Page() {
         {isLoading && (
           <ChatBubble sender="assistant">
             <span className="flex gap-1 items-center py-0.5">
-              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0ms]" style={{ background: '#0e7490' }} />
-              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:150ms]" style={{ background: '#0e7490' }} />
-              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:300ms]" style={{ background: '#0e7490' }} />
+              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:0ms]" style={{ background: '#3b82f6' }} />
+              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:150ms]" style={{ background: '#3b82f6' }} />
+              <span className="w-2 h-2 rounded-full animate-bounce [animation-delay:300ms]" style={{ background: '#3b82f6' }} />
             </span>
           </ChatBubble>
         )}
@@ -101,8 +101,8 @@ export default function Page() {
       <div
         className="shrink-0 border-t"
         style={{
-          background: '#ffffff',
-          borderColor: '#bae6fd',
+          background: '#121212',
+          borderColor: '#2a2a2a',
           paddingBottom: 'env(safe-area-inset-bottom)',
         }}
       >

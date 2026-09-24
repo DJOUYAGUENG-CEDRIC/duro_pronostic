@@ -38,21 +38,21 @@ export default function AdminLogin() {
   return (
     <div
       className="min-h-screen flex items-center justify-center"
-      style={{ background: '#f0f9ff' }}
+      style={{ background: '#000000' }}
     >
       <div
         className="w-full max-w-sm mx-4 rounded-2xl p-8 shadow-lg"
-        style={{ background: '#ffffff', border: '1px solid #bae6fd' }}
+        style={{ background: '#121212', border: '1px solid #2a2a2a' }}
       >
         <div className="text-center mb-8">
           <div
             className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-4"
-            style={{ background: '#e0f2fe', color: '#0e7490' }}
+            style={{ background: '#1c1c1c', color: '#3b82f6' }}
           >
             <LockIcon />
           </div>
-          <p className="text-xl font-bold" style={{ color: '#0c3547' }}>Duro Pronostic</p>
-          <p className="text-sm mt-1 font-medium" style={{ color: '#0e7490' }}>Panel Administrateur</p>
+          <p className="text-xl font-bold" style={{ color: '#ededed' }}>Duro Pronostic</p>
+          <p className="text-sm mt-1 font-medium" style={{ color: '#3b82f6' }}>Panel Administrateur</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -64,19 +64,19 @@ export default function AdminLogin() {
             required
             className="w-full rounded-xl px-4 py-3 text-sm outline-none transition-all"
             style={{
-              background: '#f0f9ff',
-              color: '#0c3547',
-              border: '1px solid #bae6fd',
+              background: '#000000',
+              color: '#ededed',
+              border: '1px solid #2a2a2a',
             }}
-            onFocus={(e) => { e.target.style.borderColor = '#0e7490'; e.target.style.boxShadow = '0 0 0 2px rgba(14,116,144,0.15)'; }}
-            onBlur={(e) => { e.target.style.borderColor = '#bae6fd'; e.target.style.boxShadow = 'none'; }}
+            onFocus={(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 2px rgba(59,130,246,0.15)'; }}
+            onBlur={(e) => { e.target.style.borderColor = '#2a2a2a'; e.target.style.boxShadow = 'none'; }}
           />
-          {error && <p className="text-xs text-center" style={{ color: '#e11d48' }}>{error}</p>}
+          {error && <p className="text-xs text-center" style={{ color: '#fb7185' }}>{error}</p>}
           <button
             type="submit"
             disabled={loading || !password}
             className="w-full py-3 rounded-xl text-sm font-bold text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            style={{ background: '#0e7490' }}
+            style={{ background: '#3b82f6' }}
           >
             {loading ? 'Connexion...' : 'Se connecter'}
           </button>

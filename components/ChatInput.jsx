@@ -38,12 +38,12 @@ export default function ChatInput({ onSend, disabled }) {
         disabled={disabled}
         className="flex-1 rounded-full px-4 py-2.5 text-sm outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         style={{
-          background: '#f0f9ff',
-          color: '#0c3547',
-          border: '1px solid #bae6fd',
+          background: '#000000',
+          color: '#ededed',
+          border: '1px solid #2a2a2a',
         }}
-        onFocus={(e) => { e.target.style.borderColor = '#0e7490'; e.target.style.boxShadow = '0 0 0 2px rgba(14,116,144,0.15)'; }}
-        onBlur={(e) => { e.target.style.borderColor = '#bae6fd'; e.target.style.boxShadow = 'none'; }}
+        onFocus={(e) => { e.target.style.borderColor = '#3b82f6'; e.target.style.boxShadow = '0 0 0 2px rgba(59,130,246,0.15)'; }}
+        onBlur={(e) => { e.target.style.borderColor = '#2a2a2a'; e.target.style.boxShadow = 'none'; }}
         autoComplete="off"
       />
       <button
@@ -51,7 +51,7 @@ export default function ChatInput({ onSend, disabled }) {
         disabled={!value.trim() || disabled}
         className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow"
         style={{
-          background: value.trim() && !disabled ? '#0e7490' : '#cbd5e1',
+          background: value.trim() && !disabled ? '#3b82f6' : '#3f3f3f',
           color: '#ffffff',
           cursor: value.trim() && !disabled ? 'pointer' : 'not-allowed',
         }}
